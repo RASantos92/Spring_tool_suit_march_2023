@@ -1,0 +1,24 @@
+package com.robert.inhearitancedemo;
+
+public class BackendDev extends Developer{
+	private boolean isLogical;
+	
+	
+	public BackendDev() {
+		super("backend dev no name");
+		this.setSalary(200000);
+		this.setSleep(7);
+		this.isLogical = true;
+	}
+	
+	
+	public boolean isLogical() {
+		return isLogical;
+	}
+	public void setLogical(boolean isLogical) {
+		this.isLogical = isLogical;
+	}
+	
+	
+
+}

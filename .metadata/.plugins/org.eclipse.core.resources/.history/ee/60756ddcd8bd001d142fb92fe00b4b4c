@@ -1,0 +1,10 @@
+package com.robert.inhearitancedemo;
+
+public class BackendDev extends Developer{
+
+	public BackendDev() {
+		super("backend dev no name");
+		this.salary;
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.robert.inhearitancedemo;
+
+public class BackendDev extends Developer{
+
+	public BackendDev() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
