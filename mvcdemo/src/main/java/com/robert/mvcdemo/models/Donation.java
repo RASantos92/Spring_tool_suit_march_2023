@@ -52,6 +52,14 @@ public class Donation {
 	}
 
 
+	public Donation(Long id, String donationName, String donor, Integer quantity) {
+		this.id = id;
+		this.donationName = donationName;
+		this.donor = donor;
+		this.quantity = quantity;
+	}
+
+
 	public Long getId() {
 		return id;
 	}
