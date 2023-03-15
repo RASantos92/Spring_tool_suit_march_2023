@@ -40,6 +40,7 @@ public class DonationController {
 	
 	@GetMapping("/create")
 	public String createDonation(@ModelAttribute("donation") Donation donation) {
+		donation.setDonationName("put donation name here");
 		return "/donation/form.jsp";
 	}
 	
@@ -54,10 +55,9 @@ public class DonationController {
 	
 	@GetMapping("/{id}/edit")
 	public String editDonation(@PathVariable("id") Long id, Model model) {
-		model.addAttribute("donation", donationServ.getOne(id));
+		Donation donationToBeUpdated = donationServ.getOne(id);
+		model.addAttribute("donation", donationToBeUpdated);
 		
-		Donation test = new Donation("test", "test", 90);
-		model.addAttribute("test", test);
 		return "/donation/edit.jsp";
 	}
 	
