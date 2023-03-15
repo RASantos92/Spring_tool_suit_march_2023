@@ -1,7 +1,6 @@
 package com.robert.mvcdemo.services;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -37,7 +36,8 @@ public class DonationService {
 	}
 	
 	public Donation update(Donation updatedDonation) {
-		return donationRepo.save(updatedDonation);
+		Donation newDonation = donationRepo.save(updatedDonation);
+		return newDonation;
 	}
 	
 	public void delete(Long id) {

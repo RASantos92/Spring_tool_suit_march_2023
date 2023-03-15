@@ -20,9 +20,13 @@
     <tbody>
     	<c:forEach var="donation" items="${allDonations }">
     		<tr>
-    			<td><c:out value="${donation.donor }"/></td>
+    			<td><a href="/donations/${donation.id}"><c:out value="${donation.donor }"/></a></td>
     			<td><c:out value="${donation.quantity }"/></td>
     			<td><c:out value="${donation.donationName }"/></td>
+    			<td><form action="/donations/delete/${donation.id}" method="post">
+				    <input type="hidden" name="_method" value="delete">
+				    <input type="submit" value="Delete">
+				</form></td>
     		</tr>
     	</c:forEach>
     </tbody>

@@ -38,7 +38,6 @@ public class Donation {
 	@Column(updatable = false)
 	private Date createdAt;
 	
-	@Column(updatable = false)
 	private Date updatedAt;
 
 	public Donation() {	
@@ -104,10 +103,18 @@ public class Donation {
 	public Date getUpdatedAt() {
 		return updatedAt;
 	}
+	
+	
+
+
+	public void setUpdatedAt(Date updatedAt) {
+		this.updatedAt = updatedAt;
+	}
 
 
 	@PrePersist
 	protected void onCreate() {
+		System.out.println("testing");
 		this.createdAt = new Date();
 	}
 	
