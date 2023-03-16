@@ -23,7 +23,7 @@
     <label>Donor</label>
     <form:select path="donor">
     	<c:forEach var="user" items="${allUsers}">
-    		<form:option value="${user.id}" path="donor">
+    		<form:option value="${user.id}">
     			<c:out value="${user.userName}"/>
     		</form:option>
     	</c:forEach>
