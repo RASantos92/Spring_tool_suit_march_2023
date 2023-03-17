@@ -24,7 +24,6 @@ public class UserController {
 	
 	@GetMapping("/login/reg")
 	public String loginReg(@ModelAttribute("newUser") User user,@ModelAttribute("loginUser") LoginUser loginUser,HttpSession session) {
-		System.out.println(session.getAttribute("user_id"));
 		if(session.getAttribute("user_id") != null) {
 			return "redirect:/";
 		}
@@ -60,6 +59,12 @@ public class UserController {
 		}
 		session.setAttribute("user_id", loggingUser.getId());
 		return "redirect:/";
+	}
+	
+	@GetMapping("/logout")
+	public String logout(HttpSession session) {
+		session.invalidate();
+		return "redirect:/users/login/reg";
 	}
 
 }

@@ -29,12 +29,12 @@
 				    </div>
 				    <div class="form-group">
 				        <label>Password</label>
-				        <form:input path="password" class="form-control" />
+				        <form:input type="password" path="password" class="form-control" />
 				        <form:errors path="password" class="text-danger" />
 				    </div>
 				    <div class="form-group">
 				        <label>Confirm Password</label>
-				        <form:input path="confirm" class="form-control" />
+				        <form:input type="password"  path="confirm" class="form-control" />
 				        <form:errors path="confirm" class="text-danger" />
 				    </div>
 				    <input type="submit" value="Register User" class="btn btn-primary" />
@@ -50,7 +50,7 @@
 				    </div>
 				    <div class="form-group">
 				        <label>Password</label>
-				        <form:input path="password" class="form-control" />
+				        <form:input type="password"  path="password" class="form-control" />
 				        <form:errors path="password" class="text-danger" />
 				    </div>
 				    <input type="submit" value="Add Show" class="btn btn-primary" />
